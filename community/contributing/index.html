@@ -1,0 +1,2344 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="mmagic">
+      
+      
+        <meta name="author" content="Ean Yang">
+      
+      
+        <link rel="canonical" href="https://eanyang7.github.io/mmagic/community/contributing/">
+      
+      
+        <link rel="prev" href="../../advanced_guides/structures/">
+      
+      
+        <link rel="next" href="../projects/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.jpg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>贡献代码 - mmagic 文档教程</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="mmagic 文档教程" class="md-header__button md-logo" aria-label="mmagic 文档教程" data-md-component="logo">
+      
+  <img src="../../assets/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mmagic 文档教程
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              贡献代码
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-purple"  aria-label="切换为暗黑模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换为暗黑模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="red"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EanYang7/mmagic" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github仓库
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="mmagic 文档教程" class="md-nav__button md-logo" aria-label="mmagic 文档教程" data-md-component="logo">
+      
+  <img src="../../assets/logo.jpg" alt="logo">
+
+    </a>
+    mmagic 文档教程
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EanYang7/mmagic" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github仓库
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    变更日志
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题解答
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../advanced_guides/data_flow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Advanced guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    贡献代码
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    贡献代码
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      拉取请求工作流
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拉取请求工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 复刻仓库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 配置 pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 创建开发分支
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 提交代码并在本地通过单元测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 推送代码到远程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 提交拉取请求（PR）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 解决冲突
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      指引
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="指引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      单元测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      文档渲染
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码风格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代码风格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-and-cuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++ and CUDA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      拉取请求规范
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代码规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码规范标准
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代码规范标准">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pep-8-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      PEP 8 —— Python 官方代码规范
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google 开源项目风格指南
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命名规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名规范的重要性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础命名规范
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名技巧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      docstring 规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="docstring 规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docstring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要写 docstring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstring_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写 docstring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注释规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要写注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型注解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类型注解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要写类型注解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写类型注解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型注解检查工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    生态项目
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../device/npu_zh/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Device
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../get_started/install/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../howto/dataset/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Howto
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../migration/amp/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Migration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../user_guides/config/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    User guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      拉取请求工作流
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拉取请求工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 复刻仓库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 配置 pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 创建开发分支
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 提交代码并在本地通过单元测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 推送代码到远程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 提交拉取请求（PR）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 解决冲突
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      指引
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="指引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      单元测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      文档渲染
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码风格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代码风格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-and-cuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++ and CUDA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      拉取请求规范
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代码规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码规范标准
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代码规范标准">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pep-8-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      PEP 8 —— Python 官方代码规范
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google 开源项目风格指南
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命名规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名规范的重要性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础命名规范
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名技巧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      docstring 规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="docstring 规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docstring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要写 docstring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstring_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写 docstring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注释规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要写注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型注解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类型注解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要写类型注解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写类型注解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型注解检查工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/EanYang7/mmagic/tree/main/docs/community/contributing.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/EanYang7/mmagic/tree/main/docs/community/contributing.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">贡献代码<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<p>欢迎加入 MMagic 社区，我们致力于打造新一代人工智能内容生成（AIGC）工具箱，我们欢迎任何类型的贡献，包括但不限于</p>
+<p><strong>修复错误</strong></p>
+<p>修复代码实现错误的步骤如下：</p>
+<ol>
+<li>如果提交的代码改动较大，建议先提交 issue，并正确描述 issue 的现象、原因和复现方式，讨论后确认修复方案。</li>
+<li>修复错误并补充相应的单元测试，提交拉取请求。</li>
+</ol>
+<p><strong>新增功能或组件</strong></p>
+<ol>
+<li>如果新功能或模块涉及较大的代码改动，建议先提交 issue，确认功能的必要性。</li>
+<li>实现新增功能并添单元测试，提交拉取请求。</li>
+</ol>
+<p><strong>文档补充</strong></p>
+<p>修复文档可以直接提交拉取请求</p>
+<p>添加文档或将文档翻译成其他语言步骤如下</p>
+<ol>
+<li>提交 issue，确认添加文档的必要性。</li>
+<li>添加文档，提交拉取请求。</li>
+</ol>
+<h3 id="_2">拉取请求工作流<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
+<p>如果你对拉取请求不了解，没关系，接下来的内容将会从零开始，一步一步地指引你如何创建一个拉取请求。如果你想深入了解拉取请求的开发模式，可以参考 github <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">官方文档</a></p>
+<h4 id="1">1. 复刻仓库<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h4>
+<p>当你第一次提交拉取请求时，先复刻 OpenMMLab 原代码库，点击 GitHub 页面右上角的 <strong>Fork</strong> 按钮，复刻后的代码库将会出现在你的 GitHub 个人主页下。</p>
+<p><img src="https://user-images.githubusercontent.com/57566630/167305749-43c7f4e9-449b-4e98-ade5-0c9276d5c9ce.png" width="1200"></p>
+<p>将代码克隆到本地</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:<span class="o">{</span>username<span class="o">}</span>/mmagic.git
+</code></pre></div>
+<p>添加原代码库为上游代码库</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>git@github.com:open-mmlab/mmagic
+</code></pre></div>
+<p>检查 remote 是否添加成功，在终端输入 <code>git remote -v</code></p>
+<div class="highlight"><pre><span></span><code>origin<span class="w">  </span>git@github.com:<span class="o">{</span>username<span class="o">}</span>/mmagic.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+origin<span class="w">  </span>git@github.com:<span class="o">{</span>username<span class="o">}</span>/mmagic.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+upstream<span class="w">    </span>git@github.com:open-mmlab/mmagic<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+upstream<span class="w">    </span>git@github.com:open-mmlab/mmagic<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>这里对 origin 和 upstream 进行一个简单的介绍，当我们使用 git clone 来克隆代码时，会默认创建一个 origin 的 remote，它指向我们克隆的代码库地址，而 upstream 则是我们自己添加的，用来指向原始代码库地址。当然如果你不喜欢他叫 upstream，也可以自己修改，比如叫 open-mmlab。我们通常向 origin 提交代码（即 fork 下来的远程仓库），然后向 upstream 提交一个 pull request。如果提交的代码和最新的代码发生冲突，再从 upstream 拉取最新的代码，和本地分支解决冲突，再提交到 origin。
+</code></pre></div>
+<h4 id="2-pre-commit">2. 配置 pre-commit<a class="headerlink" href="#2-pre-commit" title="Permanent link">⚓︎</a></h4>
+<p>在本地开发环境中，我们使用 <a href="https://pre-commit.com/#intro">pre-commit</a> 来检查代码风格，以确保代码风格的统一。在提交代码，需要先安装 pre-commit（需要在 mmagic 目录下执行）:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pre-commit
+pre-commit<span class="w"> </span>install
+</code></pre></div>
+<p>检查 pre-commit 是否配置成功，并安装 <code>.pre-commit-config.yaml</code> 中的钩子：</p>
+<div class="highlight"><pre><span></span><code>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<p><img src="https://user-images.githubusercontent.com/57566630/173660750-3df20a63-cb66-4d33-a986-1f643f1d8aaf.png" width="1200"></p>
+<p><img src="https://user-images.githubusercontent.com/57566630/202368856-0465a90d-8fce-4345-918e-67b8b9c82614.png" width="1200"></p>
+<div class="highlight"><pre><span></span><code>如果你是中国用户，由于网络原因，可能会出现安装失败的情况，这时可以使用国内源
+
+pre-commit install -c .pre-commit-config-zh-cn.yaml
+
+pre-commit run --all-files -c .pre-commit-config-zh-cn.yaml
+</code></pre></div>
+<p>如果安装过程被中断，可以重复执行 <code>pre-commit run ...</code> 继续安装。</p>
+<p>如果提交的代码不符合代码风格规范，pre-commit 会发出警告，并自动修复部分错误。</p>
+<p><img src="https://user-images.githubusercontent.com/57566630/202369176-67642454-0025-4023-a095-263529107aa3.png" width="1200"></p>
+<p>如果我们想临时绕开 pre-commit 的检查提交一次代码，可以在 <code>git commit</code> 时加上 <code>--no-verify</code>（需要保证最后推送至远程仓库的代码能够通过 pre-commit 检查）。</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;xxx&quot;</span><span class="w"> </span>--no-verify
+</code></pre></div>
+<h4 id="3">3. 创建开发分支<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h4>
+<p>安装完 pre-commit 之后，我们需要基于 main 创建开发分支，建议的分支命名规则为 <code>username/pr_name</code>。</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>yhc/refactor_contributing_doc
+</code></pre></div>
+<p>在后续的开发中，如果本地仓库的 main 分支落后于 upstream 的 main 分支，我们需要先拉取 upstream 的代码进行同步，再执行上面的命令</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>upstream<span class="w"> </span>main
+</code></pre></div>
+<h4 id="4">4. 提交代码并在本地通过单元测试<a class="headerlink" href="#4" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>
+<p>mmagic 引入了 mypy 来做静态类型检查，以增加代码的鲁棒性。因此我们在提交代码时，需要补充 Type Hints。具体规则可以参考<a href="https://zhuanlan.zhihu.com/p/519335398">教程</a>。</p>
+</li>
+<li>
+<p>提交的代码同样需要通过单元测试</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># 通过全量单元测试</span>
+pytest<span class="w"> </span>tests
+
+<span class="c1"># 我们需要保证提交的代码能够通过修改模块的单元测试，以 runner 为例</span>
+pytest<span class="w"> </span>tests/test_runner/test_runner.py
+</code></pre></div>
+<p>如果你由于缺少依赖无法运行修改模块的单元测试，可以参考<a href="#单元测试">指引-单元测试</a></p>
+<ul>
+<li>如果修改/添加了文档，参考<a href="#文档渲染">指引</a>确认文档渲染正常。</li>
+</ul>
+<h4 id="5">5. 推送代码到远程<a class="headerlink" href="#5" title="Permanent link">⚓︎</a></h4>
+<p>代码通过单元测试和 pre-commit 检查后，将代码推送到远程仓库，如果是第一次推送，可以在 <code>git push</code> 后加上 <code>-u</code> 参数以关联远程分支</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span><span class="o">{</span>branch_name<span class="o">}</span>
+</code></pre></div>
+<p>这样下次就可以直接使用 <code>git push</code> 命令推送代码了，而无需指定分支和远程仓库。</p>
+<h4 id="6-pr">6. 提交拉取请求（PR）<a class="headerlink" href="#6-pr" title="Permanent link">⚓︎</a></h4>
+<p>(1) 在 GitHub 的 Pull request 界面创建拉取请求
+<img src="https://user-images.githubusercontent.com/57566630/201533288-516f7ac4-0b14-4dc8-afbd-912475c368b5.png" width="1200"></p>
+<p>(2) 根据指引修改 PR 描述，以便于其他开发者更好地理解你的修改</p>
+<p><img src="https://user-images.githubusercontent.com/57566630/202242953-c91a18ff-e388-4ff9-8591-5fae0ead6c1e.png" width="1200"></p>
+<p>描述规范详见<a href="#拉取请求规范">拉取请求规范</a></p>
+<p>&#160;</p>
+<p><strong>注意事项</strong></p>
+<p>(a) PR 描述应该包含修改理由、修改内容以及修改后带来的影响，并关联相关 Issue（具体方式见<a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue">文档</a>）</p>
+<p>(b) 如果是第一次为 OpenMMLab 做贡献，需要签署 CLA</p>
+<p><img src="https://user-images.githubusercontent.com/57566630/167307569-a794b967-6e28-4eac-a942-00deb657815f.png" width="1200"></p>
+<p>(c) 检查提交的 PR 是否通过 CI（集成测试）</p>
+<p><img src="https://user-images.githubusercontent.com/57566630/167307490-f9ebf9fa-63c0-4d83-8ba1-081ea169eb3a.png" width="1200"></p>
+<p>mmagic 会在不同的平台（Linux、Window、Mac），基于不同版本的 Python、PyTorch、CUDA 对提交的代码进行单元测试，以保证代码的正确性，如果有任何一个没有通过，我们可点击上图中的 <code>Details</code> 来查看具体的测试信息，以便于我们修改代码。</p>
+<p>(3) 如果 PR 通过了 CI，那么就可以等待其他开发者的 review，并根据 reviewer 的意见，修改代码，并重复 <a href="#4-提交代码并本地通过单元测试">4</a>-<a href="#5-推送代码到远程">5</a> 步骤，直到 reviewer 同意合入 PR。</p>
+<p><img src="https://user-images.githubusercontent.com/57566630/202145400-cc2cd8c4-10b0-472f-ba37-07e6f50acc67.png" width="1200"></p>
+<p>所有 reviewer 同意合入 PR 后，我们会尽快将 PR 合并到主分支。</p>
+<h4 id="7">7. 解决冲突<a class="headerlink" href="#7" title="Permanent link">⚓︎</a></h4>
+<p>随着时间的推移，我们的代码库会不断更新，这时候，如果你的 PR 与主分支存在冲突，你需要解决冲突，解决冲突的方式有两种：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>--all<span class="w"> </span>--prune
+git<span class="w"> </span>rebase<span class="w"> </span>upstream/main
+</code></pre></div>
+<p>或者</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>--all<span class="w"> </span>--prune
+git<span class="w"> </span>merge<span class="w"> </span>upstream/main
+</code></pre></div>
+<p>如果你非常善于处理冲突，那么可以使用 rebase 的方式来解决冲突，因为这能够保证你的 commit log 的整洁。如果你不太熟悉 <code>rebase</code> 的使用，那么可以使用 <code>merge</code> 的方式来解决冲突。</p>
+<h3 id="_3">指引<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
+<h4 id="_4">单元测试<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h4>
+<p>在提交修复代码错误或新增特性的拉取请求时，我们应该尽可能的让单元测试覆盖所有提交的代码，计算单元测试覆盖率的方法如下</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>run<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>/path/to/test_file
+python<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>html
+<span class="c1"># check file in htmlcov/index.html</span>
+</code></pre></div>
+<h4 id="_5">文档渲染<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h4>
+<p>在提交修复代码错误或新增特性的拉取请求时，可能会需要修改/新增模块的 docstring。我们需要确认渲染后的文档样式是正确的。
+本地生成渲染后的文档的方法如下</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/docs.txt
+<span class="nb">cd</span><span class="w"> </span>docs/zh_cn/
+<span class="c1"># or docs/en</span>
+make<span class="w"> </span>html
+<span class="c1"># check file in ./docs/zh_cn/_build/html/index.html</span>
+</code></pre></div>
+<h3 id="_6">代码风格<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
+<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h4>
+<p><a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> 作为 OpenMMLab 算法库首选的代码规范，我们使用以下工具检查和格式化代码</p>
+<ul>
+<li><a href="https://github.com/PyCQA/flake8">flake8</a>: Python 官方发布的代码规范检查工具，是多个检查工具的封装</li>
+<li><a href="https://github.com/timothycrosley/isort">isort</a>: 自动调整模块导入顺序的工具</li>
+<li><a href="https://github.com/google/yapf">yapf</a>: Google 发布的代码规范检查工具</li>
+<li><a href="https://github.com/codespell-project/codespell">codespell</a>: 检查单词拼写是否有误</li>
+<li><a href="https://github.com/executablebooks/mdformat">mdformat</a>: 检查 markdown 文件的工具</li>
+<li><a href="https://github.com/myint/docformatter">docformatter</a>: 格式化 docstring 的工具</li>
+</ul>
+<p>yapf 和 isort 的配置可以在 <a href="../../../setup.cfg">setup.cfg</a> 找到</p>
+<p>通过配置 <a href="https://pre-commit.com/">pre-commit hook</a> ，我们可以在提交代码时自动检查和格式化 <code>flake8</code>、<code>yapf</code>、<code>isort</code>、<code>trailing whitespaces</code>、<code>markdown files</code>，修复 <code>end-of-files</code>、<code>double-quoted-strings</code>、<code>python-encoding-pragma</code>、<code>mixed-line-ending</code>，调整 <code>requirments.txt</code> 的包顺序。
+pre-commit 钩子的配置可以在 <a href="../../../.pre-commit-config.yaml">.pre-commit-config</a> 找到。</p>
+<p>pre-commit 具体的安装使用方式见<a href="#2-配置-pre-commit">拉取请求</a>。</p>
+<p>更具体的规范请参考 <a href="./#代码风格">OpenMMLab 代码规范</a>。</p>
+<h4 id="c-and-cuda">C++ and CUDA<a class="headerlink" href="#c-and-cuda" title="Permanent link">⚓︎</a></h4>
+<p>C++ 和 CUDA 的代码规范遵从 <a href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a></p>
+<h3 id="_7">拉取请求规范<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>
+<p>使用 <a href="https://pre-commit.com">pre-commit hook</a>，尽量减少代码风格相关问题</p>
+</li>
+<li>
+<p>一个<code>拉取请求</code>对应一个短期分支</p>
+</li>
+<li>
+<p>粒度要细，一个<code>拉取请求</code>只做一件事情，避免超大的<code>拉取请求</code></p>
+</li>
+<li>
+<p>Bad：实现 Faster R-CNN</p>
+</li>
+<li>Acceptable：给 Faster R-CNN 添加一个 box head</li>
+<li>
+<p>Good：给 box head 增加一个参数来支持自定义的 conv 层数</p>
+</li>
+<li>
+<p>每次 Commit 时需要提供清晰且有意义 commit 信息</p>
+</li>
+<li>
+<p>提供清晰且有意义的<code>拉取请求</code>描述</p>
+</li>
+<li>
+<p>标题写明白任务名称，一般格式:[Prefix] Short description of the pull request (Suffix)</p>
+</li>
+<li>prefix: 新增功能 [Feature], 修 bug [Fix], 文档相关 [Docs], 开发中 [WIP] (暂时不会被review)</li>
+<li>描述里介绍<code>拉取请求</code>的主要修改内容，结果，以及对其他部分的影响, 参考<code>拉取请求</code>模板</li>
+<li>
+<p>关联相关的<code>议题</code> (issue) 和其他<code>拉取请求</code></p>
+</li>
+<li>
+<p>如果引入了其他三方库，或借鉴了三方库的代码，请确认他们的许可证和 mmagic 兼容，并在借鉴的代码上补充 <code>This code is inspired from http://</code></p>
+</li>
+</ol>
+<h2 id="_8">代码规范<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h2>
+<h3 id="_9">代码规范标准<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
+<h4 id="pep-8-python">PEP 8 —— Python 官方代码规范<a class="headerlink" href="#pep-8-python" title="Permanent link">⚓︎</a></h4>
+<p><a href="https://www.python.org/dev/peps/pep-0008/">Python 官方的代码风格指南</a>，包含了以下几个方面的内容：</p>
+<ul>
+<li>
+<p>代码布局，介绍了 Python 中空行、断行以及导入相关的代码风格规范。比如一个常见的问题：当我的代码较长，无法在一行写下时，何处可以断行？</p>
+</li>
+<li>
+<p>表达式，介绍了 Python 中表达式空格相关的一些风格规范。</p>
+</li>
+<li>
+<p>尾随逗号相关的规范。当列表较长，无法一行写下而写成如下逐行列表时，推荐在末项后加逗号，从而便于追加选项、版本控制等。</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="n">FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;setup.cfg&#39;</span><span class="p">,</span> <span class="s1">&#39;tox.ini&#39;</span><span class="p">]</span>
+<span class="c1"># Correct:</span>
+<span class="n">FILES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;setup.cfg&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;tox.ini&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="c1"># Wrong:</span>
+<span class="n">FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;setup.cfg&#39;</span><span class="p">,</span> <span class="s1">&#39;tox.ini&#39;</span><span class="p">,]</span>
+<span class="c1"># Wrong:</span>
+<span class="n">FILES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;setup.cfg&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;tox.ini&#39;</span>
+<span class="p">]</span>
+</code></pre></div>
+<ul>
+<li>命名相关规范、注释相关规范、类型注解相关规范，我们将在后续章节中做详细介绍。</li>
+</ul>
+<p>"A style guide is about consistency. Consistency with this style guide is important. Consistency within a project is more important. Consistency within one module or function is the most important." PEP 8 -- Style Guide for Python Code</p>
+<p>:::{note}
+PEP 8 的代码规范并不是绝对的，项目内的一致性要优先于 PEP 8 的规范。OpenMMLab 各个项目都在 setup.cfg 设定了一些代码规范的设置，请遵照这些设置。一个例子是在 PEP 8 中有如下一个例子：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct:</span>
+<span class="n">hypot2</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
+<span class="c1"># Wrong:</span>
+<span class="n">hypot2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span>
+</code></pre></div>
+<p>这一规范是为了指示不同优先级，但 OpenMMLab 的设置中通常没有启用 yapf 的 <code>ARITHMETIC_PRECEDENCE_INDICATION</code> 选项，因而格式规范工具不会按照推荐样式格式化，以设置为准。
+:::</p>
+<h4 id="google">Google 开源项目风格指南<a class="headerlink" href="#google" title="Permanent link">⚓︎</a></h4>
+<p><a href="https://google.github.io/styleguide/pyguide.html">Google 使用的编程风格指南</a>，包括了 Python 相关的章节。相较于 PEP 8，该指南提供了更为详尽的代码指南。该指南包括了语言规范和风格规范两个部分。</p>
+<p>其中，语言规范对 Python 中很多语言特性进行了优缺点的分析，并给出了使用指导意见，如异常、Lambda 表达式、列表推导式、metaclass 等。</p>
+<p>风格规范的内容与 PEP 8 较为接近，大部分约定建立在 PEP 8 的基础上，也有一些更为详细的约定，如函数长度、TODO 注释、文件与 socket 对象的访问等。</p>
+<p>推荐将该指南作为参考进行开发，但不必严格遵照，一来该指南存在一些 Python 2 兼容需求，例如指南中要求所有无基类的类应当显式地继承 Object, 而在仅使用 Python 3 的环境中，这一要求是不必要的，依本项目中的惯例即可。二来 OpenMMLab 的项目作为框架级的开源软件，不必对一些高级技巧过于避讳，尤其是 MMCV。但尝试使用这些技巧前应当认真考虑是否真的有必要，并寻求其他开发人员的广泛评估。</p>
+<p>另外需要注意的一处规范是关于包的导入，在该指南中，要求导入本地包时必须使用路径全称，且导入的每一个模块都应当单独成行，通常这是不必要的，而且也不符合目前项目的开发惯例，此处进行如下约定：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Correct</span>
+<span class="kn">from</span> <span class="nn">mmagic.cnn.bricks</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Conv2d</span><span class="p">,</span> <span class="n">build_norm_layer</span><span class="p">,</span> <span class="n">DropPath</span><span class="p">,</span> <span class="n">MaxPool2d</span><span class="p">,</span>
+                             <span class="n">Linear</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">ext_loader</span>
+
+<span class="c1"># Wrong</span>
+<span class="kn">from</span> <span class="nn">mmagic.cnn.bricks</span> <span class="kn">import</span> <span class="n">Conv2d</span><span class="p">,</span> <span class="n">build_norm_layer</span><span class="p">,</span> <span class="n">DropPath</span><span class="p">,</span> <span class="n">MaxPool2d</span><span class="p">,</span> \
+                            <span class="n">Linear</span>  <span class="c1"># 使用括号进行连接，而不是反斜杠</span>
+<span class="kn">from</span> <span class="nn">...utils</span> <span class="kn">import</span> <span class="n">is_str</span>  <span class="c1"># 最多向上回溯一层，过多的回溯容易导致结构混乱</span>
+</code></pre></div>
+<p>OpenMMLab 项目使用 pre-commit 工具自动格式化代码，详情见<a href="./#代码风格">贡献代码</a>。</p>
+<h3 id="_10">命名规范<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
+<h4 id="_11">命名规范的重要性<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h4>
+<p>优秀的命名是良好代码可读的基础。基础的命名规范对各类变量的命名做了要求，使读者可以方便地根据代码名了解变量是一个类 / 局部变量 / 全局变量等。而优秀的命名则需要代码作者对于变量的功能有清晰的认识，以及良好的表达能力，从而使读者根据名称就能了解其含义，甚至帮助了解该段代码的功能。</p>
+<h4 id="_12">基础命名规范<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>公有</th>
+<th>私有</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模块</td>
+<td>lower_with_under</td>
+<td>_lower_with_under</td>
+</tr>
+<tr>
+<td>包</td>
+<td>lower_with_under</td>
+<td></td>
+</tr>
+<tr>
+<td>类</td>
+<td>CapWords</td>
+<td>_CapWords</td>
+</tr>
+<tr>
+<td>异常</td>
+<td>CapWordsError</td>
+<td></td>
+</tr>
+<tr>
+<td>函数（方法）</td>
+<td>lower_with_under</td>
+<td>_lower_with_under</td>
+</tr>
+<tr>
+<td>函数 / 方法参数</td>
+<td>lower_with_under</td>
+<td></td>
+</tr>
+<tr>
+<td>全局 / 类内常量</td>
+<td>CAPS_WITH_UNDER</td>
+<td>_CAPS_WITH_UNDER</td>
+</tr>
+<tr>
+<td>全局 / 类内变量</td>
+<td>lower_with_under</td>
+<td>_lower_with_under</td>
+</tr>
+<tr>
+<td>变量</td>
+<td>lower_with_under</td>
+<td>_lower_with_under</td>
+</tr>
+<tr>
+<td>局部变量</td>
+<td>lower_with_under</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>注意：</p>
+<ul>
+<li>尽量避免变量名与保留字冲突，特殊情况下如不可避免，可使用一个后置下划线，如 class_</li>
+<li>尽量不要使用过于简单的命名，除了约定俗成的循环变量 i，文件变量 f，错误变量 e 等。</li>
+<li>不会被用到的变量可以命名为 _，逻辑检查器会将其忽略。</li>
+</ul>
+<h4 id="_13">命名技巧<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h4>
+<p>良好的变量命名需要保证三点：</p>
+<ol>
+<li>含义准确，没有歧义</li>
+<li>长短适中</li>
+<li>前后统一</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong</span>
+<span class="k">class</span> <span class="nc">Masks</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>  <span class="c1"># 命名无法表现基类；Instance or Semantic？</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Correct</span>
+<span class="k">class</span> <span class="nc">BaseInstanceMasks</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Wrong，不同地方含义相同的变量尽量用统一的命名</span>
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inplanes</span><span class="p">,</span> <span class="n">planes</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p>常见的函数命名方法：</p>
+<ul>
+<li>动宾命名法：crop_img, init_weights</li>
+<li>动宾倒置命名法：imread, bbox_flip</li>
+</ul>
+<p>注意函数命名与参数的顺序，保证主语在前，符合语言习惯：</p>
+<ul>
+<li>check_keys_exist(key, container)</li>
+<li>check_keys_contain(container, key)</li>
+</ul>
+<p>注意避免非常规或统一约定的缩写，如 nb -&gt; num_blocks，in_nc -&gt; in_channels</p>
+<h3 id="docstring">docstring 规范<a class="headerlink" href="#docstring" title="Permanent link">⚓︎</a></h3>
+<h4 id="docstring_1">为什么要写 docstring<a class="headerlink" href="#docstring_1" title="Permanent link">⚓︎</a></h4>
+<p>docstring 是对一个类、一个函数功能与 API 接口的详细描述，有两个功能，一是帮助其他开发者了解代码功能，方便 debug 和复用代码；二是在 Readthedocs 文档中自动生成相关的 API reference 文档，帮助不了解源代码的社区用户使用相关功能。</p>
+<h4 id="docstring_2">如何写 docstring<a class="headerlink" href="#docstring_2" title="Permanent link">⚓︎</a></h4>
+<p>与注释不同，一份规范的 docstring 有着严格的格式要求，以便于 Python 解释器以及 sphinx 进行文档解析，详细的 docstring 约定参见 <a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a>。此处以例子的形式介绍各种文档的标准格式，参考格式为 <a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/#comments">Google 风格</a>。</p>
+<ol>
+<li>模块文档</li>
+</ol>
+<p>代码风格规范推荐为每一个模块（即 Python 文件）编写一个 docstring，但目前 OpenMMLab 项目大部分没有此类 docstring，因此不做硬性要求。</p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;A one line summary of the module or program, terminated by a period.</span>
+
+<span class="sd">Leave one blank line. The rest of this docstring should contain an</span>
+<span class="sd">overall description of the module or program. Optionally, it may also</span>
+<span class="sd">contain a brief description of exported classes and functions and/or usage</span>
+<span class="sd">examples.</span>
+
+<span class="sd">Typical usage example:</span>
+
+<span class="sd">foo = ClassFoo()</span>
+<span class="sd">bar = foo.FunctionBar()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<ol>
+<li>类文档</li>
+</ol>
+<p>类文档是我们最常需要编写的，此处，按照 OpenMMLab 的惯例，我们使用了与 Google 风格不同的写法。如下例所示，文档中没有使用 Attributes 描述类属性，而是使用 Args 描述 <strong>init</strong> 函数的参数。</p>
+<p>在 Args 中，遵照 <code>parameter (type): Description.</code> 的格式，描述每一个参数类型和功能。其中，多种类型可使用 <code>(float or str)</code> 的写法，可以为 None 的参数可以写为 <code>(int, optional)</code>。</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BaseRunner</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The base class of Runner, a training helper for PyTorch.</span>
+
+<span class="sd">    All subclasses should implement the following APIs:</span>
+
+<span class="sd">    - ``run()``</span>
+<span class="sd">    - ``train()``</span>
+<span class="sd">    - ``val()``</span>
+<span class="sd">    - ``save_checkpoint()``</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model (:obj:`torch.nn.Module`): The model to be run.</span>
+<span class="sd">        batch_processor (callable, optional): A callable method that process</span>
+<span class="sd">            a data batch. The interface of this method should be</span>
+<span class="sd">            ``batch_processor(model, data, train_mode) -&gt; dict``.</span>
+<span class="sd">            Defaults to None.</span>
+<span class="sd">        optimizer (dict or :obj:`torch.optim.Optimizer`, optional): It can be</span>
+<span class="sd">            either an optimizer (in most cases) or a dict of optimizers</span>
+<span class="sd">            (in models that requires more than one optimizer, e.g., GAN).</span>
+<span class="sd">            Defaults to None.</span>
+<span class="sd">        work_dir (str, optional): The working directory to save checkpoints</span>
+<span class="sd">            and logs. Defaults to None.</span>
+<span class="sd">        logger (:obj:`logging.Logger`): Logger used during training.</span>
+<span class="sd">             Defaults to None. (The default value is just for backward</span>
+<span class="sd">             compatibility)</span>
+<span class="sd">        meta (dict, optional): A dict records some import information such as</span>
+<span class="sd">            environment info and seed, which will be logged in logger hook.</span>
+<span class="sd">            Defaults to None.</span>
+<span class="sd">        max_epochs (int, optional): Total training epochs. Defaults to None.</span>
+<span class="sd">        max_iters (int, optional): Total training iterations. Defaults to None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">model</span><span class="p">,</span>
+                 <span class="n">batch_processor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">optimizer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">work_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_iters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_epochs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="o">...</span>
+</code></pre></div>
+<p>另外，在一些算法实现的主体类中，建议加入原论文的链接；如果参考了其他开源代码的实现，则应加入 modified from，而如果是直接复制了其他代码库的实现，则应加入 copied from ，并注意源码的 License。如有必要，也可以通过 .. math:: 来加入数学公式</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 参考实现</span>
+<span class="c1"># This func is modified from `detectron2</span>
+<span class="c1"># &lt;https://github.com/facebookresearch/detectron2/blob/ffff8acc35ea88ad1cb1806ab0f00b4c1c5dbfd9/detectron2/structures/masks.py#L387&gt;`_.</span>
+
+<span class="c1"># 复制代码</span>
+<span class="c1"># This code was copied from the `ubelt</span>
+<span class="c1"># library&lt;https://github.com/Erotemic/ubelt&gt;`_.</span>
+
+<span class="c1"># 引用论文 &amp; 添加公式</span>
+<span class="k">class</span> <span class="nc">LabelSmoothLoss</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="s2">&quot;&quot;&quot;Initializer for the label smoothed cross entropy loss.</span>
+
+<span class="s2">    Refers to `Rethinking the Inception Architecture for Computer Vision</span>
+<span class="s2">    &lt;https://arxiv.org/abs/1512.00567&gt;`_.</span>
+
+<span class="s2">    This decreases gap between output scores and encourages generalization.</span>
+<span class="s2">    Labels provided to forward can be one-hot like vectors (NxC) or class</span>
+<span class="s2">    indices (Nx1).</span>
+<span class="s2">    And this accepts linear combination of one-hot like labels from mixup or</span>
+<span class="s2">    cutmix except multi-label task.</span>
+
+<span class="s2">    Args:</span>
+<span class="s2">        label_smooth_val (float): The degree of label smoothing.</span>
+<span class="s2">        num_classes (int, optional): Number of classes. Defaults to None.</span>
+<span class="s2">        mode (str): Refers to notes, Options are &quot;original&quot;, &quot;classy_vision&quot;,</span>
+<span class="s2">            &quot;multi_label&quot;. Defaults to &quot;classy_vision&quot;.</span>
+<span class="s2">        reduction (str): The method used to reduce the loss.</span>
+<span class="s2">            Options are &quot;none&quot;, &quot;mean&quot; and &quot;sum&quot;. Defaults to &#39;mean&#39;.</span>
+<span class="s2">        loss_weight (float):  Weight of the loss. Defaults to 1.0.</span>
+
+<span class="s2">    Note:</span>
+<span class="s2">        if the ``mode`` is &quot;original&quot;, this will use the same label smooth</span>
+<span class="s2">        method as the original paper as:</span>
+
+<span class="s2">        .. math::</span>
+<span class="s2">            (1-\epsilon)\delta_{k, y} + \frac{\epsilon}</span><span class="si">{K}</span>
+
+<span class="s2">        where :math:`\epsilon` is the ``label_smooth_val``, :math:`K` is</span>
+<span class="s2">        the ``num_classes`` and :math:`\delta_{k,y}` is Dirac delta,</span>
+<span class="s2">        which equals 1 for k=y and 0 otherwise.</span>
+
+<span class="s2">        if the ``mode`` is &quot;classy_vision&quot;, this will use the same label</span>
+<span class="s2">        smooth method as the `facebookresearch/ClassyVision</span>
+<span class="s2">        &lt;https://github.com/facebookresearch/ClassyVision/blob/main/classy_vision/losses/label_smoothing_loss.py&gt;`_ repo as:</span>
+
+<span class="s2">        .. math::</span>
+<span class="s2">            \frac{\delta_{k, y} + \epsilon/K}{1+\epsilon}</span>
+
+<span class="s2">        if the ``mode`` is &quot;multi_label&quot;, this will accept labels from</span>
+<span class="s2">        multi-label task and smoothing them as:</span>
+
+<span class="s2">        .. math::</span>
+<span class="s2">            (1-2\epsilon)\delta_{k, y} + \epsilon</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>注意 \`\`here\`\`、\`here\`、&quot;here&quot; 三种引号功能是不同。
+
+在 reStructured 语法中，\`\`here\`\` 表示一段代码；\`here\` 表示斜体；&quot;here&quot; 无特殊含义，一般可用来表示字符串。其中 \`here\` 的用法与 Markdown 中不同，需要多加留意。
+另外还有 :obj:\`type\` 这种更规范的表示类的写法，但鉴于长度，不做特别要求，一般仅用于表示非常用类型。
+</code></pre></div>
+<ol>
+<li>方法（函数）文档</li>
+</ol>
+<p>函数文档与类文档的结构基本一致，但需要加入返回值文档。对于较为复杂的函数和类，可以使用 Examples 字段加入示例；如果需要对参数加入一些较长的备注，可以加入 Note 字段进行说明。</p>
+<p>对于使用较为复杂的类或函数，比起看大段大段的说明文字和参数文档，添加合适的示例更能帮助用户迅速了解其用法。需要注意的是，这些示例最好是能够直接在 Python 交互式环境中运行的，并给出一些相对应的结果。如果存在多个示例，可以使用注释简单说明每段示例，也能起到分隔作用。</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">import_modules_from_strings</span><span class="p">(</span><span class="n">imports</span><span class="p">,</span> <span class="n">allow_failed_imports</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import modules from the given list of strings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        imports (list | str | None): The given module names to be imported.</span>
+<span class="sd">        allow_failed_imports (bool): If True, the failed imports will return</span>
+<span class="sd">            None. Otherwise, an ImportError is raise. Defaults to False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[module] | module | None: The imported modules.</span>
+<span class="sd">        All these three lines in docstring will be compiled into the same</span>
+<span class="sd">        line in readthedocs.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; osp, sys = import_modules_from_strings(</span>
+<span class="sd">        ...     [&#39;os.path&#39;, &#39;sys&#39;])</span>
+<span class="sd">        &gt;&gt;&gt; import os.path as osp_</span>
+<span class="sd">        &gt;&gt;&gt; import sys as sys_</span>
+<span class="sd">        &gt;&gt;&gt; assert osp == osp_</span>
+<span class="sd">        &gt;&gt;&gt; assert sys == sys_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>如果函数接口在某个版本发生了变化，需要在 docstring 中加入相关的说明，必要时添加 Note 或者 Warning 进行说明，例如：</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">CheckpointHook</span><span class="p">(</span><span class="n">Hook</span><span class="p">):</span>
+    <span class="s2">&quot;&quot;&quot;Save checkpoints periodically.</span>
+
+<span class="s2">    Args:</span>
+<span class="s2">        out_dir (str, optional): The root directory to save checkpoints. If</span>
+<span class="s2">            not specified, ``runner.work_dir`` will be used by default. If</span>
+<span class="s2">            specified, the ``out_dir`` will be the concatenation of</span>
+<span class="s2">            ``out_dir`` and the last level directory of ``runner.work_dir``.</span>
+<span class="s2">            Defaults to None. `Changed in version 1.3.15.`</span>
+<span class="s2">        file_client_args (dict, optional): Arguments to instantiate a</span>
+<span class="s2">            FileClient. See :class:`mmagic.fileio.FileClient` for details.</span>
+<span class="s2">            Defaults to None. `New in version 1.3.15.`</span>
+
+<span class="s2">    Warning:</span>
+<span class="s2">        Before v1.3.15, the ``out_dir`` argument indicates the path where the</span>
+<span class="s2">        checkpoint is stored. However, in v1.3.15 and later, ``out_dir``</span>
+<span class="s2">        indicates the root directory and the final path to save checkpoint is</span>
+<span class="s2">        the concatenation of out_dir and the last level directory of</span>
+<span class="s2">        ``runner.work_dir``. Suppose the value of ``out_dir`` is</span>
+<span class="s2">        &quot;/path/of/A&quot; and the value of ``runner.work_dir`` is &quot;/path/of/B&quot;,</span>
+<span class="s2">        then the final path will be &quot;/path/of/A/B&quot;.</span>
+</code></pre></div>
+<p>如果参数或返回值里带有需要展开描述字段的 dict，则应该采用如下格式：</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Args:</span>
+<span class="sd">        x (None): A dict with 2 keys, ``padded_targets``, and ``targets``.</span>
+
+<span class="sd">            - ``targets`` (list[Tensor]): A list of tensors.</span>
+<span class="sd">              Each tensor has the shape of :math:`(T_i)`. Each</span>
+<span class="sd">              element is the index of a character.</span>
+<span class="sd">            - ``padded_targets`` (Tensor): A tensor of shape :math:`(N)`.</span>
+<span class="sd">              Each item is the length of a word.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: A dict with 2 keys, ``padded_targets``, and ``targets``.</span>
+
+<span class="sd">        - ``targets`` (list[Tensor]): A list of tensors.</span>
+<span class="sd">          Each tensor has the shape of :math:`(T_i)`. Each</span>
+<span class="sd">          element is the index of a character.</span>
+<span class="sd">        - ``padded_targets`` (Tensor): A tensor of shape :math:`(N)`.</span>
+<span class="sd">          Each item is the length of a word.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>为了生成 readthedocs 文档，文档的编写需要按照 ReStructrued 文档格式，否则会产生文档渲染错误，在提交 PR 前，最好生成并预览一下文档效果。
+语法规范参考：
+
+- [reStructuredText Primer - Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#)
+- [Example Google Style Python Docstrings ‒ napoleon 0.7 documentation](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google)
+</code></pre></div>
+<h3 id="_14">注释规范<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h3>
+<h4 id="_15">为什么要写注释<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h4>
+<p>对于一个开源项目，团队合作以及社区之间的合作是必不可少的，因而尤其要重视合理的注释。不写注释的代码，很有可能过几个月自己也难以理解，造成额外的阅读和修改成本。</p>
+<h4 id="_16">如何写注释<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h4>
+<p>最需要写注释的是代码中那些技巧性的部分。如果你在下次代码审查的时候必须解释一下，那么你应该现在就给它写注释。对于复杂的操作，应该在其操作开始前写上若干行注释。对于不是一目了然的代码，应在其行尾添加注释。
+—— Google 开源项目风格指南</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># We use a weighted dictionary search to find out where i is in</span>
+<span class="c1"># the array. We extrapolate position based on the largest num</span>
+<span class="c1"># in the array and the array size and then do binary search to</span>
+<span class="c1"># get the exact number.</span>
+<span class="k">if</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># True if i is 0 or a power of 2.</span>
+</code></pre></div>
+<p>为了提高可读性, 注释应该至少离开代码2个空格.
+另一方面, 绝不要描述代码. 假设阅读代码的人比你更懂Python, 他只是不知道你的代码要做什么.
+—— Google 开源项目风格指南</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong:</span>
+<span class="c1"># Now go through the b array and make sure whenever i occurs</span>
+<span class="c1"># the next element is i+1</span>
+
+<span class="c1"># Wrong:</span>
+<span class="k">if</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># True if i bitwise and i-1 is 0.</span>
+</code></pre></div>
+<p>在注释中，可以使用 Markdown 语法，因为开发人员通常熟悉 Markdown 语法，这样可以便于交流理解，如可使用单反引号表示代码和变量（注意不要和 docstring 中的 ReStructured 语法混淆）</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># `_reversed_padding_repeated_twice` is the padding to be passed to</span>
+<span class="c1"># `F.pad` if needed (e.g., for non-zero padding types that are</span>
+<span class="c1"># implemented as two ops: padding + conv). `F.pad` accepts paddings in</span>
+<span class="c1"># reverse order than the dimension.</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_reversed_padding_repeated_twice</span> <span class="o">=</span> <span class="n">_reverse_repeat_tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_17">注释示例<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>出自 <code>mmcv/utils/registry.py</code>，对于较为复杂的逻辑结构，通过注释，明确了优先级关系。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># self.build_func will be set with the following priority:</span>
+<span class="c1"># 1. build_func</span>
+<span class="c1"># 2. parent.build_func</span>
+<span class="c1"># 3. build_from_cfg</span>
+<span class="k">if</span> <span class="n">build_func</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">build_func</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">build_func</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">build_func</span> <span class="o">=</span> <span class="n">build_from_cfg</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">build_func</span> <span class="o">=</span> <span class="n">build_func</span>
+</code></pre></div>
+<ol>
+<li>出自 <code>mmcv/runner/checkpoint.py</code>，对于 bug 修复中的一些特殊处理，可以附带相关的 issue 链接，帮助其他人了解 bug 背景。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">_save_ckpt</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+    <span class="c1"># The 1.6 release of PyTorch switched torch.save to use a new</span>
+    <span class="c1"># zipfile-based file format. It will cause RuntimeError when a</span>
+    <span class="c1"># checkpoint was saved in high version (PyTorch version&gt;=1.6.0) but</span>
+    <span class="c1"># loaded in low version (PyTorch version&lt;1.6.0). More details at</span>
+    <span class="c1"># https://github.com/open-mmlab/mmpose/issues/904</span>
+    <span class="k">if</span> <span class="n">digit_version</span><span class="p">(</span><span class="n">TORCH_VERSION</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">digit_version</span><span class="p">(</span><span class="s1">&#39;1.6.0&#39;</span><span class="p">):</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">_use_new_zipfile_serialization</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_18">类型注解<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h3>
+<h4 id="_19">为什么要写类型注解<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h4>
+<p>类型注解是对函数中变量的类型做限定或提示，为代码的安全性提供保障、增强代码的可读性、避免出现类型相关的错误。
+Python 没有对类型做强制限制，类型注解只起到一个提示作用，通常你的 IDE 会解析这些类型注解，然后在你调用相关代码时对类型做提示。另外也有类型注解检查工具，这些工具会根据类型注解，对代码中可能出现的问题进行检查，减少 bug 的出现。
+需要注意的是，通常我们不需要注释模块中的所有函数：</p>
+<ol>
+<li>公共的 API 需要注释</li>
+<li>在代码的安全性，清晰性和灵活性上进行权衡是否注释</li>
+<li>对于容易出现类型相关的错误的代码进行注释</li>
+<li>难以理解的代码请进行注释</li>
+<li>若代码中的类型已经稳定，可以进行注释. 对于一份成熟的代码，多数情况下，即使注释了所有的函数，也不会丧失太多的灵活性.</li>
+</ol>
+<h4 id="_20">如何写类型注解<a class="headerlink" href="#_20" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>函数 / 方法类型注解，通常不对 self 和 cls 注释。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="c1"># 全部位于一行</span>
+<span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_var</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># 另起一行</span>
+<span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">first_var</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">second_var</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">MyLongType1</span><span class="p">,</span> <span class="n">MyLongType1</span><span class="p">,</span> <span class="n">MyLongType1</span><span class="p">]:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># 单独成行（具体的应用场合与行宽有关，建议结合 yapf 自动化格式使用）</span>
+<span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">first_var</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">second_var</span><span class="p">:</span> <span class="nb">float</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">MyLongType1</span><span class="p">,</span> <span class="n">MyLongType1</span><span class="p">,</span> <span class="n">MyLongType1</span><span class="p">]:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># 引用尚未被定义的类型</span>
+<span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">stack</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;MyClass&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+</code></pre></div>
+<p>注：类型注解中的类型可以是 Python 内置类型，也可以是自定义类，还可以使用 Python 提供的 wrapper 类对类型注解进行装饰，一些常见的注解如下：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 数值类型</span>
+<span class="kn">from</span> <span class="nn">numbers</span> <span class="kn">import</span> <span class="n">Number</span>
+
+<span class="c1"># 可选类型，指参数可以为 None</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># 联合类型，指同时接受多种类型</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
+    <span class="k">pass</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Sequence</span>  <span class="c1"># 序列类型</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span>  <span class="c1"># 可迭代类型</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>  <span class="c1"># 任意类型</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span>  <span class="c1"># 可调用类型</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>  <span class="c1"># 列表和字典的泛型类型</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span>  <span class="c1"># 元组的特殊格式</span>
+<span class="c1"># 虽然在 Python 3.9 中，list, tuple 和 dict 本身已支持泛型，但为了支持之前的版本</span>
+<span class="c1"># 我们在进行类型注解时还是需要使用 List, Tuple, Dict 类型</span>
+<span class="c1"># 另外，在对参数类型进行注解时，尽量使用 Sequence &amp; Iterable &amp; Mapping</span>
+<span class="c1"># List, Tuple, Dict 主要用于返回值类型注解</span>
+<span class="c1"># 参见 https://docs.python.org/3/library/typing.html#typing.List</span>
+</code></pre></div>
+<ol>
+<li>变量类型注解，一般用于难以直接推断其类型时</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Recommend: 带类型注解的赋值</span>
+<span class="n">a</span><span class="p">:</span> <span class="n">Foo</span> <span class="o">=</span> <span class="n">SomeUndecoratedFunction</span><span class="p">()</span>
+<span class="n">a</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>         <span class="c1"># List 只支持单一类型泛型，可使用 Union</span>
+<span class="n">b</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>     <span class="c1"># 长度固定为 2</span>
+<span class="n">c</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># 变长</span>
+<span class="n">d</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+
+<span class="c1"># Not Recommend：行尾类型注释</span>
+<span class="c1"># 虽然这种方式被写在了 Google 开源指南中，但这是一种为了支持 Python 2.7 版本</span>
+<span class="c1"># 而补充的注释方式，鉴于我们只支持 Python 3, 为了风格统一，不推荐使用这种方式。</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">SomeUndecoratedFunction</span><span class="p">()</span>  <span class="c1"># type: Foo</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># type: List[int]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># type: Tuple[int, ...]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span>  <span class="c1"># type: Tuple[int, Text, float]</span>
+</code></pre></div>
+<ol>
+<li>泛型</li>
+</ol>
+<p>上文中我们知道，typing 中提供了 list 和 dict 的泛型类型，那么我们自己是否可以定义类似的泛型呢？</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
+
+<span class="n">KT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;KT&#39;</span><span class="p">)</span>
+<span class="n">VT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;VT&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Mapping</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">KT</span><span class="p">,</span> <span class="n">VT</span><span class="p">]):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">KT</span><span class="p">,</span> <span class="n">VT</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">KT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VT</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</code></pre></div>
+<p>使用上述方法，我们定义了一个拥有泛型能力的映射类，实际用法如下：</p>
+<div class="highlight"><pre><span></span><code><span class="n">mapping</span> <span class="o">=</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">})</span>
+<span class="n">value</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">example</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</code></pre></div>
+<p>另外，我们也可以利用 TypeVar 在函数签名中指定联动的多个类型：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>  <span class="c1"># Can be anything</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span>  <span class="c1"># Must be str or bytes</span>
+
+
+<span class="k">def</span> <span class="nf">repeat</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list containing n references to x.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+
+
+<span class="k">def</span> <span class="nf">longest</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">A</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">A</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">A</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the longest of two strings.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span>
+</code></pre></div>
+<p>更多关于类型注解的写法请参考 <a href="https://docs.python.org/3/library/typing.html">typing</a>。</p>
+<h4 id="_21">类型注解检查工具<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h4>
+<p><a href="https://mypy.readthedocs.io/en/stable/">mypy</a> 是一个 Python 静态类型检查工具。根据你的类型注解，mypy 会检查传参、赋值等操作是否符合类型注解，从而避免可能出现的 bug。</p>
+<p>例如如下的一个  Python 脚本文件 test.py:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+
+<span class="n">a</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="s1">&#39;2.0&#39;</span><span class="p">)</span>
+<span class="n">b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="s1">&#39;3.0&#39;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+</code></pre></div>
+<p>运行 mypy test.py 可以得到如下检查结果，分别指出了第 4 行在函数调用和返回值赋值两处类型错误。而第 5 行同样存在两个类型错误，由于使用了 type: ignore 而被忽略了，只有部分特殊情况可能需要此类忽略。</p>
+<div class="highlight"><pre><span></span><code>test.py:4: error: Incompatible types in assignment (expression has type &quot;float&quot;, variable has type &quot;int&quot;)
+test.py:4: error: Argument 1 to &quot;foo&quot; has incompatible type &quot;str&quot;; expected &quot;int&quot;
+Found 2 errors in 1 file (checked 1 source file)
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 27, 2023</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 27, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../../advanced_guides/structures/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Data Structure">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Data Structure
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../projects/" class="md-footer__link md-footer__link--next" aria-label="下一页: 生态项目">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                生态项目
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ean Yang
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/YQisme" target="_blank" rel="noopener" title="github主页" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/244185393?spm_id_from=333.788.0.0" target="_blank" rel="noopener" title="b站主页" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://eanyang7.com" target="_blank" rel="noopener" title="个人主页" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm40 304v128c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9l-28.6 47.6c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352h-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.prune", "navigation.top", "toc.follow", "header.autohide", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
